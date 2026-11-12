@@ -7,7 +7,7 @@ import getPageContext from './src/data/index.js';
 
 const __dirname = import.meta.dirname;
 
-const base_path = import.meta.env?.BASE_URL ?? '';
+const base_path = process.env.BASE_PATH ?? '/';
 function obtenerHtmlFiles() {
     return Object.fromEntries(
         glob.sync(
