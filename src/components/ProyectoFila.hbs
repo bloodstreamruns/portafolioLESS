@@ -1,0 +1,14 @@
+<article data-role="proyecto" class="fila-proyecto">
+    <div class="proyecto-info">
+        <h3>{{proyecto_titulo}}</h3>
+        <p>{{proyecto_descripcion}}</p>
+    </div>
+    <div class="proyecto-meta">
+        <p class="proyecto-stack">{{proyecto_stack}}</p>
+        {{#if proyecto_repositorio}}
+            <div class="proyecto-enlaces">
+                <a href="{{proyecto_repositorio}}" target="_blank">Repositorio</a>
+            </div>
+        {{/if}}
+    </div>
+</article>

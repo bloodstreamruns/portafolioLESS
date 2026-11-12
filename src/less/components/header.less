@@ -1,0 +1,41 @@
+header {
+    background-color: @header-bg-color;
+    border-bottom: 1px solid @border-color;
+    padding: 30px 40px;
+
+    nav {
+        ul {
+            .flex-row();
+            list-style: none;
+            gap: 25px;
+            margin: 0 0 30px 0;
+            padding: 0;
+        }
+
+        a {
+            position: relative;
+            color: @muted-text-color;
+            font-size: 14px;
+            padding-bottom: 4px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 1px;
+                background-color: @alternate-bg-color;
+                transition: width 0.25s ease;
+            }
+
+            &:hover {
+                color: @primary-text-color;
+
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

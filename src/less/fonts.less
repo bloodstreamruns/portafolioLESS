@@ -1,0 +1,14 @@
+.fuente(@familia, @archivo, @peso) {
+    @font-face {
+        font-family: @familia;
+        src: url("../assets/fonts/@{archivo}.woff2") format("woff2");
+        font-weight: @peso;
+        font-style: normal;
+        font-display: swap;
+    }
+}
+
+.fuente("IBM Plex Sans", "ibm-plex-sans-400", 400);
+.fuente("IBM Plex Sans", "ibm-plex-sans-600", 600);
+.fuente("IBM Plex Mono", "ibm-plex-mono-400", 400);
+.fuente("Spectral", "spectral-600", 600);

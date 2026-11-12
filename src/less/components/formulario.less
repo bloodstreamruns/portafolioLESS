@@ -1,0 +1,47 @@
+#form-contacto {
+    .flex-col();
+    gap: 18px;
+    max-width: 420px;
+
+    label {
+        display: block;
+        font-size: 13px;
+        color: @muted-text-color;
+        margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid @border-color;
+        color: @primary-text-color;
+        font-family: @font-body;
+        font-size: 15px;
+        padding: 8px 0;
+
+        &:focus {
+            outline: none;
+            border-bottom-color: @alternate-bg-color;
+        }
+    }
+
+    button {
+        align-self: flex-start;
+        margin-top: 8px;
+        background-color: @alternate-bg-color;
+        color: @primary-bg-color;
+        border: none;
+        padding: 10px 24px;
+        font-family: @font-body;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: lighten(@alternate-bg-color, 10%);
+        }
+    }
+}

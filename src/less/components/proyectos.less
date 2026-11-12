@@ -1,0 +1,57 @@
+.lista-proyectos {
+    border-top: 1px solid @border-color;
+}
+
+.fila-proyecto {
+    .flex-col();
+    gap: 25px;
+    padding: 28px 0;
+    border-bottom: 1px solid @border-color;
+
+    h3 {
+        .heading(18px);
+        margin-bottom: 8px;
+    }
+
+    &__info {
+        p {
+            color: @muted-text-color;
+        }
+    }
+
+    &__meta {
+        text-align: left;
+    }
+
+    &__enlaces a {
+        margin-left: 15px;
+        font-size: 14px;
+        color: @alternate-bg-color;
+        text-decoration: none;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    @media (min-width: @breaks[tablet]) {
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__info {
+            flex: 0 0 60%;
+        }
+
+        &__meta {
+            flex: 0 0 35%;
+            text-align: right;
+        }
+    }
+}
+
+.stack {
+    font-family: @font-mono;
+    font-size: 12px;
+    color: @muted-text-color;
+    margin-bottom: 10px;
+}

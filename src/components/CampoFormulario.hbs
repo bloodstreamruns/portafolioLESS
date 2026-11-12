@@ -1,0 +1,8 @@
+<div data-role="campo-formulario">
+    <label for="{{campo_id}}">{{campo_etiqueta}}</label>
+    {{#if campo_multilinea}}
+        <textarea id="{{campo_id}}" name="{{campo_id}}" rows="4" required></textarea>
+    {{else}}
+        <input type="{{campo_tipo}}" id="{{campo_id}}" name="{{campo_id}}" required>
+    {{/if}}
+</div>

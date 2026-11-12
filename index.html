@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - {{perfil_nombre}}</title>
+    <link rel="stylesheet" href="src/less/style.less">
+</head>
+<body>
+    {{>Header}}
+
+    <main>
+        <section id="biografia">
+            <h2>Biografía</h2>
+            <p>{{perfil_biografia}}</p>
+        </section>
+
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <div class="lista-proyectos">
+                {{#each proyectos}}
+                    {{>ProyectoFila}}
+                {{/each}}
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form id="form-contacto">
+                {{#each campos}}
+                    {{>CampoFormulario}}
+                {{/each}}
+                <button type="submit">Enviar</button>
+            </form>
+            <p>Email: <a href="mailto:{{contacto_email}}">{{contacto_email}}</a></p>
+        </section>
+    </main>
+
+    {{>Footer}}
+</body>
+</html>
